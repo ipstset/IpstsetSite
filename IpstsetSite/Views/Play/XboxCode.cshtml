@@ -1,0 +1,158 @@
+﻿@model IpstsetSite.Models.HangmanViewModel
+
+@{
+    ViewBag.Title = "Hangman";
+    Layout = "~/Views/Shared/_LayoutPlay.cshtml";
+}
+
+@section HeadAdditions
+{
+<link href="@Url.Content("~/Content/Hangman.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+ <script src="@Url.Content("~/Scripts/ipstset.modal.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    //convert the order model to js object
+    var gameOver = @Model.GameOver.ToString().ToLower();
+    
+    var popMessage = {};
+    
+    $(document).ready(function () {
+        if(!gameOver)
+         $(".game-input").focus();
+
+        popMessage = new ipstset_modal.Modal($('#pop-message'));
+ 
+    });
+    
+    function showMessage(){
+        popMessage.show();
+    }
+</script>
+}
+
+<div class="game-container">
+
+<div class="game-header">
+<h2>Xbox Code for <a href="@Url.Content("~/r/letter-munch-xbox-marketplace")" target="_blank" class="lm-link">>Letter Munch</a></h2>
+
+@{
+    
+    
+    if (Model.GameOver && !Model.GameWon)
+    {
+        <div class="game-over-x">
+            GAME OVER! <a href="@Url.Content("~/play/hangman?gametype=" + Model.GameType.Text)">>try again?</a>
+        </div>
+    }
+
+    if (Model.GameOver && Model.GameWon)
+    {
+        <div class="game-over-x game-over-x-win">
+            Nice! You can redeem the code <a href="@Url.Content("~/r/xbox-redeem-code")" target="_blank">>here</a>
+        </div>
+    }
+    <br style="clear: both;"/>  
+}
+
+
+
+<div class="letters">
+ @foreach (var c in Model.Characters)
+ {
+
+     if (c.Tiled)
+     {
+         var style = c.Visible ? "letter-block-x-shown" : "";
+        <span class="letter-block-x @style">@c.Display</span>
+     }
+     else
+     {
+        <span class="letter-block-x-none">@c.Display</span>
+     }
+
+ } 
+
+<br style="clear: both;"/>  
+</div>
+<br style="clear: both;"/>  
+
+
+
+
+@{
+    if (@Model.Message != null)
+    {
+        var msgStyle = "input-message";
+        if ((int)Model.Message.Type == 0)
+        {
+            msgStyle += " input-message-error";
+        }
+            
+        <p class="@msgStyle">@Model.Message.Text</p>
+    }
+}
+
+
+<div class="input-block">
+
+
+
+
+<form id="game-input" method="POST" action="@Url.Content("~/play/hangman")" autocomplete="off">
+enter a letter:<br/>
+<input class="game-input" type="text" name="Guessed" maxlength="1"/>
+<input class="game-submit" type="submit" value="enter"/>
+<input type="hidden" name="GameId" value="@Model.Id"/>
+
+</form>
+<div class="input-block-guessed">
+previous guesses:<br/>
+@{
+    foreach (var guess in Model.Guessed)
+    {
+        <span>@guess</span>
+    }
+        
+}
+</div>
+<div class="input-block-remaining">
+remaining:<br/>
+<span>
+@Model.RemainingGuesses
+</span>
+</div>
+
+<br style="clear: both;"/>
+<div class="help-box" onclick="showMessage();" title="help">?</div>  
+</div>
+<div class="image-block">
+    @{
+        var img = Model.RemainingGuesses.ToString();
+        if (Model.GameOver && Model.GameWon)
+        {
+            img = "w";
+        }
+            
+    }
+
+    <img src="@Url.Content("~/Content/images/bomb_" + img + ".png")"/>
+</div>
+<br style="clear: both;"/>
+
+
+<div id="pop-message">
+<p>
+Solve the puzzle and redeem the code on your Xbox
+or Xbox.com for a free copy of Letter Munch on 
+Xbox Live Indie Games.
+</p>
+<p>
+There are 5 different codes available...good luck, 
+even if you solve the puzzle someone else might have
+already redeemed the code.
+</p>
+<p>
+Or, you can just play some normal <a href="@Url.Content("~/play/hangman?gametype=1")">Hangman</a>.
+</p>
+</div>
+

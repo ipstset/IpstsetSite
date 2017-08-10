@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpstsetSite", "IpstsetSite\IpstsetSite.csproj", "{6A155445-9896-4867-BD0C-1B0CB34AFA16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipstset.Play.RobotOrLobot", "..\Ipstset.Play.RobotOrLobot\Ipstset.Play.RobotOrLobot.csproj", "{95D52FC0-B5F8-45CB-8247-12BCED2695AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipstset.Play", "..\Ipstset.Play\Ipstset.Play.csproj", "{0D3EB9B6-76EF-4033-B628-175D7AAE748E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipstset.Authentication", "..\Ipstset.Authentication\Ipstset.Authentication.csproj", "{D7BB7F78-9C87-4F09-A127-E0BA36AD7B75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipstset.Validation", "..\Ipstset.Validation\Ipstset.Validation.csproj", "{FC4DB2C7-72C0-4080-838C-A942968A9E30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A155445-9896-4867-BD0C-1B0CB34AFA16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A155445-9896-4867-BD0C-1B0CB34AFA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A155445-9896-4867-BD0C-1B0CB34AFA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A155445-9896-4867-BD0C-1B0CB34AFA16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D52FC0-B5F8-45CB-8247-12BCED2695AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D52FC0-B5F8-45CB-8247-12BCED2695AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D52FC0-B5F8-45CB-8247-12BCED2695AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D52FC0-B5F8-45CB-8247-12BCED2695AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3EB9B6-76EF-4033-B628-175D7AAE748E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3EB9B6-76EF-4033-B628-175D7AAE748E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3EB9B6-76EF-4033-B628-175D7AAE748E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3EB9B6-76EF-4033-B628-175D7AAE748E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7BB7F78-9C87-4F09-A127-E0BA36AD7B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BB7F78-9C87-4F09-A127-E0BA36AD7B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BB7F78-9C87-4F09-A127-E0BA36AD7B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BB7F78-9C87-4F09-A127-E0BA36AD7B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC4DB2C7-72C0-4080-838C-A942968A9E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC4DB2C7-72C0-4080-838C-A942968A9E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC4DB2C7-72C0-4080-838C-A942968A9E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC4DB2C7-72C0-4080-838C-A942968A9E30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

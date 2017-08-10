@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Ipstset Software";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/ipstset.main.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/ipstset.modal.js")" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-76886-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+    
+    <img src="@Url.Content("~/Content/images/static.gif")" class="bg">
+
+    <div class="logo">
+        <img src="@Url.Content("~/Content/images/ipstset-logo.png")" alt="Ipstset Software" title="Ipstset Software" /> 
+    </div>
+    <div class="navigation">
+        <div class="navigation-block block-games" onclick="showGames();">games</div>
+        <div class="navigation-block block-play" onclick="showPlay();">play</div>
+        <div class="navigation-block block-about" onclick="showAbout();">about</div>
+        
+    </div>
+    <div class="navigation-sub">
+        <div class="navigation-block block-sub" onclick="showDetail(0);">letter munch</div>
+        <div class="navigation-block block-sub" onclick="showDetail(1);">earth's end</div>
+    </div>
+     <div class="navigation-sub-play">
+        <div class="navigation-block block-sub-play" onclick="window.location.href = '@Url.Content("~/play/hangman")';">hangman</div>
+        <div class="navigation-block block-sub-play" onclick="window.location.href = '@Url.Content("~/play/xbox-code")';">win letter munch code</div>
+    </div>
+
+    <div id="pop-games">
+        <div class="pop-games-header">Letter Munch</div>
+        <div class="pop-games-left">
+        <p>Munch...Spell...Score!</p>   
+        <p>How large is your vocabulary? Capture the falling letters to create words. Use double and triple-score tiles and chain multiple bonuses to keep time from expiring and get the high score.</p>
+        </div>
+        <div class="pop-games-right">
+            <img src="@Url.Content("~/Content/images/boxart_letter_munch.png")" alt="Letter Munch" title="Letter Munch" />
+        </div>
+    </div>
+
+    <div id="pop-about">
+        <div class="pop-about-container">
+            <div class="pop-about-header">
+                Me.</div>
+            David Haug. Programmer and I do other stuff (like this site).<br />
+            
+            <div class="pop-about-header">
+                Contact.</div>
+            Reach me at david@ipstset.com.
+        </div>
+    </div>
+
+</body>
+</html>

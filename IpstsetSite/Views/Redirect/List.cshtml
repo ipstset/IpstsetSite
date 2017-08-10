@@ -1,0 +1,80 @@
+﻿@model IEnumerable<IpstsetSite.Models.SiteRedirect>
+
+@{
+    ViewBag.Title = "Links";
+    Layout = "~/Views/Shared/_LayoutPlay.cshtml";
+}
+
+<style>
+.list-container
+{
+
+	font-size: 12px;
+	margin-bottom: 20px;
+	padding: 20px;
+	color: #ccc;
+
+}
+
+.list-container a
+{
+	text-decoration: none;
+	color: #ccc;
+}
+
+.list-container ul { list-style: none;}
+
+.list-container ul li div
+{
+    padding: 5px 10px;
+}
+
+.alt-row
+{
+	background-color: #272525;
+}
+
+span.site-text { display: block; float: left; font-size: 18px; font-weight: bold; font-family: Helvetica Neue, Arial; color: #5191c1;}
+span.site-text a { color: #5191c1;}
+span.site-date { display: block; float: right; }
+span.site-url { display: block;  clear: both;}
+
+.list-header { font-size: 24px; font-weight: bold; background-color: #8ca315; padding: 10px 20px; color: #000;}
+
+</style>
+
+
+
+<div class="list-container">
+<div class="list-header">Links</div>
+<ul>
+@{
+    var alt = false;
+}
+@foreach (var site in Model)
+{
+    var rowCss = "";
+    
+    if(alt)
+    {
+       rowCss = "alt-row"; 
+    }
+     
+
+    
+    <li>
+        <div class="@rowCss">
+            <span class="site-text"><a href="@site.Url">@site.Text</a></span>
+            <span class="site-date">@site.DateCreated.ToShortDateString()</span>
+            <span class="site-url"><a href="@site.Url">@site.Url</a></span>
+        </div>
+    </li>
+
+    alt = !alt;
+}
+
+</ul>
+<br style="clear: both;"/>
+
+</div>
+

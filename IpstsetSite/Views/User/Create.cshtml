@@ -1,0 +1,60 @@
+﻿@model IpstsetSite.Models.CreateUserViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPlay.cshtml";
+}
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            //var validation = @Html.Raw(Json.Encode(Model.Validation.ValidationResults));
+            MapValidation(@Html.Raw(Json.Encode(Model.Validation.ValidationResults)));
+
+
+            
+        });
+        
+        function MapValidation(validationResults) {
+            $.each(validationResults, function() {
+
+                if (this.TaskName == "UserNameValid") {
+
+                    $("#user-msg").html(this.Message);
+                }
+
+
+                if (this.TaskName == "EmailValidTask") {
+
+                    $("#email-msg").html(this.Message);
+                }
+
+
+            });
+        }
+
+        
+
+</script>
+
+<div class="game-container">
+<h2>Create</h2>
+
+<form method="POST" action="@Url.Content("~/user/create")">
+
+Email:<br/>
+<input type="text" name="User.Email"/><span id="email-msg"></span><br/>
+User Name:<br/>
+<input type="text" name="User.UserName"/><span id="user-msg"></span><br/>
+Password:<br/>
+<input type="text" name="User.Password"/><br/>
+Confirm Password:<br/>
+<input type="text" id="password-confirm"/><br/>
+
+<input type="submit" value="Create"/>
+
+</form>
+
+
+
+
+</div>

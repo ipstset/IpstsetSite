@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "No more codes...";
+    Layout = "~/Views/Shared/_LayoutPlay.cshtml";
+}
+
+<div class="error-container">
+<img src="@Url.Content("~/Content/images/sad_face_2.gif")" style="float: left;"/>
+<div style="float: left; margin-left: 20px; width: 500px;">
+<h2 class="big-msg">
+    Sorry, no more codes...
+</h2>
+
+@{
+    var munch = "@lettermunch";
+}
+
+<span style="color: #f5f5f5;">
+All the available codes for <a href="@Url.Content("~/r/letter-munch-xbox-marketplace")" class="default-link">Letter Munch</a> have been won, but you can follow <a href="@Url.Content("~/r/letter-munch-twitter")" class="default-link">@munch</a> to find out when more codes are available.
+</span>
+<p>
+@Html.ActionLink("back to ipstset.com","Index","Home",null,new{ @class="default-link"})
+
+</p>
+</div>
+<br class="clearfix"/>
+</div>

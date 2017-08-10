@@ -1,0 +1,26 @@
+﻿@model IpstsetSite.Models.EmailTest
+
+@{
+    ViewBag.Title = "Email";
+}
+
+<h2>Email</h2>
+
+<div>
+    @Model.Result
+</div>
+
+<form action="@Url.Content("~/tests/email")" method="POST">
+    
+    <label for="To">To</label><br/>
+    <input type="text" name="To" value="@Model.To"/><br/>
+    <label for="Subject">Subject</label><br/>
+    <input type="text" name="Subject" value="@Model.Subject"/><br/>
+    <label for="Body">Message</label><br/>
+    <textarea name="Body" rows="20">@Model.Body</textarea><br/>
+    <label for="To">AuthToken</label><br/>
+    <input type="text" name="AuthenticationToken" value="@Model.AuthenticationToken"/><br/>
+
+    <input type="submit" value="Send"/>
+</form>
+

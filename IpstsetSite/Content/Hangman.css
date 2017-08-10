@@ -1,0 +1,314 @@
+﻿.letter-block
+{
+	display: block;
+	float: left;
+	width: 62px;
+	height: 74px;
+	line-height: 74px;
+	text-align: center;
+	font-size: 48px;
+	font-weight: bold;
+	background-color: #272525;
+	color: #000;
+	margin: 4px;
+
+}
+
+.letter-block-shown
+{
+	background-color: #8ca315;
+}
+
+.letter-block-none
+{
+	display: block;
+	float: left;
+	width: 62px;
+	height: 74px;
+	line-height: 74px;
+	text-align: center;
+	font-size: 48px;
+	font-weight: bold;
+	color: #000;
+	margin: 4px;
+}
+
+.game-over
+{
+	padding: 10px;
+	background-color: Red;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+    float: left;
+    max-width: 525px;
+
+}
+
+.game-over a
+{
+	color: yellow;
+	
+}
+
+.game-over-win
+{
+	background-color: Green;
+
+}
+.letters
+{
+	margin-bottom: 0px;
+}
+
+.input-block
+{
+	color: #fff;
+	background-color: #5191c1;
+	width: 448px;
+	padding: 16px;
+	font-size: 18px;
+	float: left;
+}
+.image-block
+{
+	float: right;
+}
+.game-container
+{
+	padding: 10px 20px 10px 20px;
+   
+}
+
+.game-input
+{
+	height: 36px;
+	width: 64px;
+	font-size: 36px;
+	padding: 9px;
+	font-face: arial;
+	background-color: #aaa;
+	border: 1px solid #fff;
+}
+.game-submit
+{
+	height: 56px;
+	font-size: 18px;
+	color: #fff;
+    padding: 0px 10px 0px 10px;
+	background-color: #f56417;
+	border: 1px solid #f56417;
+	line-height: 56px;
+	position: relative;
+	top: -6px;
+}
+
+input[type=submit] {
+    -webkit-border-radius:0px;
+}
+
+.input-block-remaining
+{
+	float: right;
+
+}
+
+.input-block-remaining span
+{
+	font-size: 48px;
+	color: #000;
+}
+
+.input-block-guessed
+{
+	float: left;
+    width: 280px;
+}
+
+.input-block-guessed span
+{
+	font-size: 24px;
+	color: #d2d2d2;
+}
+
+.input-message
+{
+	color: #fff;
+	padding: 5px 16px 5px 16px;
+	width: 448px;
+	margin-bottom: 6px;
+}
+.input-message-error
+{
+	background-color: red;
+}
+
+
+
+.popup-main
+{
+	width:300px;
+	position: absolute;
+	margin:0px auto;
+	bottom: 10px;
+	background-color: #fff;
+	color: #444;
+	font-size: 18px;
+	padding: 40px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+.parent{
+position:fixed;
+bottom:10px;
+width:100%;
+} 
+.child{
+width: 636px;
+height: 321px;
+margin:0px auto;
+background-image: url(../../content/images/message-box.png);
+background-repeat: no-repeat;
+background-position: bottom;
+color: #444;
+	font-size: 18px;
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+.child-body
+{
+	padding: 40px;
+}
+
+.modal-close-2
+{
+	background: url(../../content/images/modal_close_1.png) no-repeat;
+	background-color: Red;
+	width: 20px;
+height: 20px;
+
+cursor: pointer;
+}
+
+#pop-message
+{
+    display: none;
+    width: 556px;
+    height: 321px;
+    color: #444;
+    background-image: url(../../content/images/message-box.png);
+	background-repeat: no-repeat;
+	font-size: 18px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	padding: 40px;
+}
+
+.help-box
+{
+	background-color: #f3840c;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+	cursor: pointer;
+}
+
+.scoreboard
+{
+	padding: 4px 0px 4px 10px;
+	background-color: #1a5985;
+    float: right;
+    width: 217px;
+}
+
+.scoreboard-block
+{
+	float: left;
+	font-size: 24px;
+	color: #fff;
+	margin-right: 20px;
+    line-height: 22px;
+    text-align: right;
+}
+
+.scoreboard-block span
+{
+	color: #5191c1;
+	font-size: 14px;
+	margin-bottom: 0px;
+	display: block;
+}
+
+.scoreboard-block span.scoreboard-val
+{
+	font-size: 24px;
+	color: #fff;
+}
+.game-header
+{
+	width: 100%;
+	
+}
+
+/* Xbox Code */
+.letter-block-x
+{
+	display: block;
+	float: left;
+	width: 48px;
+	height: 57px;
+	line-height: 57px;
+	text-align: center;
+	font-size: 42px;
+	font-weight: bold;
+	background-color: #272525;
+	color: #000;
+	margin: 2px;
+
+}
+
+.letter-block-x-shown
+{
+	background-color: #8ca315;
+}
+
+.letter-block-x-none
+{
+	display: block;
+	float: left;
+	width: 48px;
+	height: 57px;
+	line-height: 57px;
+	text-align: center;
+	font-size: 42px;
+	font-weight: bold;
+	color: #000;
+	margin: 2px;
+}
+
+.game-over-x
+{
+	padding: 10px;
+	background-color: Red;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+    float: left;
+    width: 600px;
+	margin-bottom: 4px;
+
+}
+.game-over-x-win
+{
+	background-color: Green;
+}
+.game-over-x a
+{
+	color: yellow;
+}
+
+.lm-link
+{
+	color: yellow;
+}

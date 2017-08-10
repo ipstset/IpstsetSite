@@ -1,0 +1,365 @@
+﻿body {
+    background-color: #000;
+	color: #fff;
+	font-family: 'CPMono_v07Plain', Arial, sans-serif;
+	margin: 0;
+}
+
+
+
+@font-face {
+    font-family: 'CPMono_v07Plain';
+    src: url('../../Content/fonts/CPMono_v07_Plain-webfont.eot');
+    src: url('../../Content/fonts/CPMono_v07_Plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../Content/fonts/CPMono_v07_Plain-webfont.woff') format('woff'),
+         url('../../Content/fonts/CPMono_v07_Plain-webfont.ttf') format('truetype'),
+         url('../../Content/fonts/CPMono_v07_Plain-webfont.svg#CPMono_v07Plain') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.logo {
+	width: 153px;
+	height: 192px;
+	position: absolute;
+	left: 32px;
+	top: 132px;
+}
+
+.navigation
+{
+	position: absolute;
+	left: 207px;
+	top: 132px;
+}
+
+.navigation-sub 
+{
+	display: none;
+	position: absolute;
+	left: 425px;
+	top:132px;
+}
+
+.navigation-block
+{
+	color: #fff;
+	width: 200px;
+
+	margin-bottom: 8px;
+	font-size: 18px;
+	cursor: pointer;
+	line-height: 35px;
+	padding-left: 10px;
+}
+
+.navigation-sub-play
+{
+	display: none;
+	position: absolute;
+	left: 425px;
+	top:175px;
+}
+
+.block-games { background-color: #1e6495;}
+.block-games:hover { background-color: #1a5985;}
+.block-about { background-color: #8ca315;}
+.block-about:hover { background-color: #7d9112;}
+.block-play { background-color: #fb6f24;}
+.block-play:hover { background-color: #f05e0f;}
+
+.block-sub { background-color: #5191c1;}
+.block-sub:hover { background-color: #4881ac;}
+
+.block-sub-play { width: 300px; background-color: #fd9602;}
+.block-sub-play:hover { background-color: #eb7e08;}
+
+#pop-games
+{
+	color: #444;
+	font-size: 16px;
+	width: 720px;
+	height: 400px;
+	display: none;
+	
+	
+	background-color: #69d2e7;
+	background-image: url(../../content/images/modal_border.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding: 40px;
+}
+
+
+.pop-games-header
+{
+	font-size: 60px;
+	line-height: 1;
+	font-weight: bold;
+	letter-spacing: -3px;
+	color: #444;
+	text-shadow: rgba(0, 0, 0, 0.9) 0px 0px 1px;
+	font-family: arial;
+}
+
+.pop-games-left
+{
+	width: 440px;
+	float: left;
+}
+
+.pop-games-right
+{
+	width: 220px;
+	float: right;
+}
+
+#pop-about
+{
+	color: #444;
+	font-size: 16px;
+	width: 720px;
+	height: 400px;
+	display: none;
+	
+	
+	background-color: #e1f47c;
+	background-image: url(../../content/images/modal_border.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding: 40px 40px 20px 40px;
+}
+
+.pop-about-container
+{
+	width: 720px;
+	height: 400px;
+	overflow-y: auto;
+}
+
+.pop-about-header
+{
+	font-size: 60px;
+	line-height: 1;
+	font-weight: bold;
+	letter-spacing: -3px;
+	color: #444;
+	text-shadow: rgba(0, 0, 0, 0.9) 0px 0px 1px;
+	font-family: arial;
+}
+
+#pop-about label { font-size: 12px;font-family: Arial;font-weight: bold;color: #222;}
+
+a.marketplace {
+display: inline-block;
+padding: 2px 6px 2px 6px;
+background-color: green;
+text-decoration: none;
+color: white;
+	border: 1px solid green;
+}
+a.marketplace:hover {
+background-color: #fff;
+text-decoration: none;
+color: green;
+
+}
+
+#feedback-email
+{
+	font-family: Arial;
+	font-size: 14px;
+	width: 300px;
+}
+
+#feedback-message
+{
+	width: 600px;
+    height: 65px;
+	font-family: Arial;
+	font-size: 14px;
+	resize: none;
+}
+
+.feedback-status
+{
+	background-image: url(../../content/images/ajax-loader.gif);
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 200px;
+	float: left;
+	display: inline-block;
+	margin-left: 12px;
+	padding-left: 40px;
+	padding-top: 4px;
+	font-family: arial;
+	font-weight: bold;
+	color: #222;
+	font-size: 13px;
+}
+.what-else 
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #8ca315;
+	line-height: 14px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.what-else-and
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #fb6f24;
+	line-height: 14px;
+	padding-left: 4px;
+	padding-right: 4px;
+		border: 1px solid #fb6f24;
+	cursor: pointer;
+}
+.what-else-and:hover
+{
+background-color: #fff;
+text-decoration: none;
+color: #fb6f24;
+}
+
+
+.link-button {
+display: inline-block;
+padding: 2px 6px 2px 6px;
+background-color: #fb6f24;
+text-decoration: none;
+color: white;
+	border: 1px solid #fb6f24;
+		cursor: pointer;
+	float: left;
+}
+.link-button:hover {
+background-color: #fff;
+text-decoration: none;
+color: #fb6f24;
+
+}
+
+
+img.bg {
+	/* Set rules to fill background */
+	min-height: 100%;
+	min-width: 1024px;
+
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+	img.bg {
+		left: 50%;
+		margin-left: -512px;   /* 50% */
+	}
+}
+
+/*modal */
+.modal-back {
+background-color: black;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 10000;
+zoom: 1;
+filter: alpha(opacity=60);
+opacity: 0.6;
+}
+
+.modal-window {
+
+	z-index: 10001;
+	position: absolute;
+
+
+}
+
+
+
+.modal-close {
+background: url(../../content/images/modal_close_1.png) no-repeat;
+width: 20px;
+height: 20px;
+position: absolute;
+right: 8px;
+top: 8px;
+cursor: pointer;
+}
+
+.big-msg {
+   
+    display: block;
+	font-size: 81px;
+	font-family: arial,sans-serif;
+	line-height: 1;
+	font-weight: bold;
+	letter-spacing: -3px;
+	color: #111;
+	text-shadow: rgba(0, 0, 0, 0.9) 0px 0px 1px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+.container {
+	width: 80%;
+	background-color: #424242;
+	margin:0 auto;
+	margin-top: 40px;
+	
+	background-image: url(../../content/images/modal_border.png);
+background-position: bottom;
+	background-repeat: repeat-x;
+}
+
+.error-container
+{
+	padding: 60px 40px 60px 40px;
+	
+
+}
+
+.clearfix {
+	clear: both;
+}
+
+.default-link
+{
+	text-decoration: none;
+	color: #5191c1;
+}
+
+.container-play {
+	background-color: #424242;
+	margin:0 auto;
+	margin-top: 40px;
+	position: relative;
+	min-width: 800px;
+	max-width: 1000px;
+	background-image: url(../../content/images/modal_border.png);
+	background-position: bottom;
+	background-repeat: repeat-x;
+
+}
+
+.tiny-menu
+{
+	position: fixed;
+	top: 4px;
+	left: 4px;
+	z-index: 100;
+}
